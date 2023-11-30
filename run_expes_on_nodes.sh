@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "reset in_progress"
-helper_scripts/reset_sweeper_inprogress.sh
+~/g5k-scripts/reset_sweeper_inprogress.sh
 
 hosts=$(echo $(oarstat -fu --json) | jq -r '.[].assigned_network_address[]')
 for host in $hosts; do
